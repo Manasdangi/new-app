@@ -7,6 +7,13 @@ const { readdirSync } = require('fs');
 // const port =;
 const app = express();
 
+const cors = require('cors');
+app.use(
+  cors({
+    origin: 'https://manasraj-weather-app.herokuapp.com/',
+  })
+);
+
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
