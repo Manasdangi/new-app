@@ -18,11 +18,10 @@ weatherform.addEventListener('submit', (e) => {
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.update.country;
-        messageTwo.textContent =
-          'There is ' + data.update.temperature + ' degree celsuis';
+        messageTwo.textContent = 'There is ' + data.update.temperature; //+ ' degree celsuis';
         messageThree.textContent = 'There is ' + data.update.weather_condition;
         messageFour.textContent =
-          'There is ' + data.update.temperature + ' percentage rain possible';
+          'There is ' + data.update.precipitation + ' percentage rain possible';
       }
     });
   });
